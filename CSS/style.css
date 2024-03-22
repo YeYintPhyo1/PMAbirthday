@@ -1,0 +1,236 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #d2e6d5;
+  backdrop-filter: blur(10px);
+}
+.container {
+  width: 100%;
+}
+.sidebar {
+  height: 100%;
+  width: 10%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(24, 211, 52, 0.3);
+  overflow-x: hidden;
+  padding-top: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.sidebar span {
+  border: 1px solid rgab(0, 0, 0, 0.3);
+  border-radius: 50%;
+  padding: 10px;
+  text-align: center;
+}
+.sidebar a {
+  padding: 20px;
+  /*background-color: #b4c5b6;*/
+  text-decoration: none;
+  font-size: 40px;
+  color: #1f1f20;
+  display: block;
+  transition: 0.3s;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+.sidebar a:hover {
+  z-index: 1000;
+  color: aliceblue;
+  /*width: 600px;*/
+  background-color: rgba(0, 255, 255, 0.3);
+  /*transition: width;
+transform: scale(1.1);*/
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  transform: translateZ(10px);
+}
+.main {
+  margin-left: 30%;
+  margin-top: 10%;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+/* For Animation left side of main div */
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-300px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes slideInRight {
+  from {
+    transform: translateY(-300px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes slideInUp {
+  from {
+    transform: translateY(900px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+/*.left-side{
+  animation: slideInLeft 1s ease-in 1s 1 normal both;
+transform: translateX(-150px);
+}*/
+.happy {
+  font-size: 60px;
+  text-align: right;
+  background-color: transparent;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: green;
+  -webkit-text-stroke: 2px green;
+  /* Animation */
+  /*animation: slidein 3s infinite alternate ease-in-out;*/
+  animation: slideInLeft 1s ease-in 1s 1 normal both;
+  transform: translateX(-150px);
+}
+@keyframes slidein {
+  0% {
+    color: red;
+    left: 0px;
+    top: 0px;
+  }
+  25% {
+    color: yellow;
+    left: 200px;
+    top: 0px;
+  }
+  50% {
+    color: blue;
+    left: 200px;
+    top: 200px;
+  }
+  75% {
+    color: green;
+    left: 0px;
+    top: 200px;
+  }
+  100% {
+    color: red;
+    left: 0px;
+    top: 0px;
+  }
+}
+.img1 {
+  width: 800px;
+  height: 500px;
+  padding: 0px 30px;
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  box-shadow: 2px 1px 2px rgba(0, 255, 255, 0.3);
+  border-radius: 10%;
+  animation: slideInRight 1s ease-in 1s 1 normal both;
+  transform: translateX(-150px);
+}
+.phone {
+  /*position: relative;
+animation-name: textright;
+animation-duration: 4s;
+animation-delay: 2s;*/
+  animation: slideInLeft 1s ease-in 1s 1 normal both;
+
+  transform: translateX(-150px);
+}
+@keyframes textright {
+  0% {
+    color: red;
+    right: 0px;
+    top: 0px;
+  }
+  25% {
+    color: yellow;
+    left: 0px;
+    top: 0px;
+  }
+  50% {
+    color: blue;
+    left: 200px;
+    top: 200px;
+  }
+  75% {
+    color: green;
+    left: 0px;
+    top: 200px;
+  }
+  100% {
+    color: red;
+    left: 0px;
+    top: 0px;
+  }
+}
+.message {
+  padding: 10px 0;
+  animation: slideInUp 1s linear 2s 1 normal both;
+  transform: translateX(0px);
+}
+.thank {
+  font-family: fantasy;
+  animation: slideInUp 1s linear 2s 1 normal both;
+  transform: translateX(-150px);
+}
+/*********** Footer **********/
+fa-instagram {
+  font-size: 30px;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 50%;
+  border: 1px solid #ff0095;
+}
+fa-brands fa-twitter{
+  font-size: 30px;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 50%;
+  border: 1px solid #ff0095;
+}
+fa-brands fa-youtube{
+  font-size: 30px;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 50%;
+  border: 1px solid #ff0095;
+}
+fa-brands fa-facebook{
+  font-size: 30px;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 50%;
+  border: 1px solid #ff0095;
+}
+.fa-instagram:hover {
+  box-shadow: 0px 0px 7px #ff0095 inset, 0px 0px 7px #ff0095;
+}
+.fa-brands-fa-facebook:hover{
+  box-shadow: 0px 0px 7px #ff0095 inset, 0px 0px 7px #ff0095;
+}
+body {
+  /* On screens that are 992px or less, set the background color to blue */
+  @media screen and (max-width: 992px) {
+    background-color: blue;
+  }
+}
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+  body {
+    background-color: olive;
+  }
+  .sidebar a {
+    padding: 8px;
+    font-size: 28px;
+  }
+}
